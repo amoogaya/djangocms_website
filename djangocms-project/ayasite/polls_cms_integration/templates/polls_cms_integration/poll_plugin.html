@@ -7,12 +7,12 @@
 <body>
     <h1>{{ instance.poll.question }}</h1>
 
-    <form action="{% url 'polls:vote' instance.poll.id %}" method="post">
+    <form action="" method="post">
         {% csrf_token %}
         <div class="class-form">
             {% for choice in instance.poll.choice_set.all %}
                 <div>
-                        <input type="radio" name="choice" value="{{ choice.id}}">
+                        <input type="radio" name="choice" value="{{ choice.id }}">
                         {{choice.choice_text}}
                 </div>
             {% endfor %}
