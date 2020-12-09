@@ -230,6 +230,7 @@ DATABASES = {
     }
 }
 
+ALDRYN_BOILERPLATE_NAME = 'bootstrap3'
 THUMBNAIL_PROCESSORS = (
     'easy_thumbnails.processors.colorspace',
     'easy_thumbnails.processors.autocrop',
@@ -243,4 +244,3 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
 
-ALDRYN_BOILERPLATE_NAME = 'bootstrap3'
