@@ -204,7 +204,6 @@ CMS_LANGUAGES = {
         'hide_untranslated': False,
     },
 }
-ALDRYN_BOILERPLATE_NAME = 'bootstrap3'
 
 CMS_TEMPLATES = (
     ## Customize this
@@ -231,6 +230,7 @@ DATABASES = {
     }
 }
 
+ALDRYN_BOILERPLATE_NAME = 'bootstrap3'
 THUMBNAIL_PROCESSORS = (
     'easy_thumbnails.processors.colorspace',
     'easy_thumbnails.processors.autocrop',
