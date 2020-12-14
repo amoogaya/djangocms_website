@@ -2,9 +2,8 @@ from cms.menu_bases import CMSAttachMenu
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 from menus.menu_pool import menu_pool
-from menus.base import NavigationNode
+from menus.base import NavigationNode, Menu
 from polls.models import Poll
-import polls
 
 
 class PollsMenu(CMSAttachMenu):
@@ -18,6 +17,7 @@ class PollsMenu(CMSAttachMenu):
                 title=poll.question,
                 url=reverse('polls:detail', args=(poll.pk,)),
                 id=poll.pk,
+                attr={'visible_for_anonymous': False}
             )
             nodes.append(node)
 
