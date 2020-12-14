@@ -180,6 +180,7 @@ INSTALLED_APPS = [
     'ayasite',
     'polls_cms_integration',
     'polls',
+    'faq',
 ]
 
 LANGUAGES = (
@@ -243,4 +244,3 @@ STATICFILES_FINDERS = [
     'aldryn_boilerplates.staticfile_finders.AppDirectoriesFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
-

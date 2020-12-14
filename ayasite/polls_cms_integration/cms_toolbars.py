@@ -8,7 +8,6 @@ class PollToolbar(CMSToolbar):
     supported_apps = ['polls']
 
     def populate(self):
-
         if not self.is_current_app:
             return
 

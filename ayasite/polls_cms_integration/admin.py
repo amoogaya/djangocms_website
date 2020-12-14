@@ -4,7 +4,7 @@ from cms.admin.placeholderadmin import PlaceholderAdminMixin
 
 
 class MyModelAdmin(PlaceholderAdminMixin, admin.ModelAdmin):
-    pass
+    list_display = ['my_placeholder']
 
 
 # Register your models here.

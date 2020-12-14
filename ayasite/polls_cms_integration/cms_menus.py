@@ -4,6 +4,7 @@ from django.utils.translation import gettext_lazy as _
 from menus.menu_pool import menu_pool
 from menus.base import NavigationNode
 from polls.models import Poll
+import polls
 
 
 class PollsMenu(CMSAttachMenu):
@@ -16,6 +17,7 @@ class PollsMenu(CMSAttachMenu):
             node = NavigationNode(
                 title=poll.question,
                 url=reverse('polls:detail', args=(poll.pk,)),
+                id=poll.pk,
             )
             nodes.append(node)
 
