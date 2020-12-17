@@ -1,4 +1,6 @@
 import os  # isort:skip
+from django.utils.translation import gettext_lazy as _
+
 
 gettext = lambda s: s
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
@@ -143,6 +145,7 @@ INSTALLED_APPS = [
     'sekizai',
     'treebeard',
     'djangocms_text_ckeditor',
+    'mptt',
     'filer',
     'easy_thumbnails',
     'djangocms_bootstrap4',
@@ -164,7 +167,6 @@ INSTALLED_APPS = [
     'djangocms_icon',
     'djangocms_link',
     'djangocms_picture',
-    'djangocms_style',
     'djangocms_googlemap',
     'djangocms_video',
     'aldryn_apphooks_config',
@@ -173,6 +175,8 @@ INSTALLED_APPS = [
     'aldryn_common',
     'aldryn_newsblog',
     'aldryn_people',
+    'aldryn_style',
+    'aldryn_bootstrap3',
     'parler',
     'sortedm2m',
     'taggit',
@@ -186,6 +190,7 @@ INSTALLED_APPS = [
 LANGUAGES = (
     ## Customize this
     ('en', gettext('en')),
+    ('ar', gettext('ar')),
 )
 
 CMS_LANGUAGES = {
@@ -209,8 +214,7 @@ CMS_LANGUAGES = {
 CMS_TEMPLATES = (
     ## Customize this
     ('fullwidth.html', 'Fullwidth'),
-    ('sidebar_left.html', 'Sidebar Left'),
-    ('sidebar_right.html', 'Sidebar Right')
+    ('home.html', 'Home'),
 )
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
@@ -244,3 +248,27 @@ STATICFILES_FINDERS = [
     'aldryn_boilerplates.staticfile_finders.AppDirectoriesFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
+
+DJANGOCMS_ICON_TEMPLATES = [
+    ('svg', 'SVG template'),
+]
+
+
+DJANGOCMS_ICON_SETS = [
+    ('elusiveicon', 'el', 'Elusive Icons'),
+    ('flagicon', 'flag-icon', 'Flag Icons'),
+    ('fontawesome4', 'fa', 'Font Awesome 4'),
+    ('fontawesome5regular', 'far', 'Font Awesome 5 Regular'),
+    ('fontawesome5solid', 'fas', 'Font Awesome 5 Solid'),
+    ('fontawesome5brands', 'fab', 'Font Awesome 5 Brands'),
+    ('fontawesome5light', 'fal', 'Font Awesome 5 Light', '5.3.1_pro'),
+    ('glyphicon', 'glyphicon', 'Glyphicons'),
+    ('ionicon', 'ion', 'Ionicons Icons'),
+    ('mapicon', 'map-icon', 'Map Icons'),
+    ('materialdesign', 'zmdi', 'Material Design'),
+    ('octicon', 'octicon', 'Octicons'),
+    ('typicon', 'typcn', 'Typicons'),
+    ('weathericon', 'wi', 'Weather Icons'),
+    ('ICONSET', 'icon', 'Custom web font'),
+]
+

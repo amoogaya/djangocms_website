@@ -2,12 +2,22 @@
 
 {% block content %}
 
-    <h1>{{ view.config.title }}</h1>
-    <p>Namespace: {{ view.namespace }}</p>
-    <dl>
+    <h1 class="card h-100 alert-success">{{ view.config.title }}</h1>
+    <p style="color: lightseagreen"> The Namespace is : {{ view.namespace }}</p>
+    <dl class="card-body">
         {% for entry in object_list %}
-            <dt>{{ entry.question }}</dt>
-            <dd>{{ entry.answer }}</dd>
+            <div class="card h-50">
+                <dt >
+                    <p style="margin-left:24px;color: #0c5460">
+                        {{ entry.question }}
+                    </p>
+                </dt>
+                <dd>
+                    <p style="margin-left:34px; ">
+                        {{ entry.answer }}
+                    </p>
+                </dd>
+            </div>
         {% endfor %}
     </dl>
 
